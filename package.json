@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Lee-star-one/vue-/issues"
   },
-  "homepage": "https://github.com/Lee-star-one/vue-#readme"
+  "homepage": "https://github.com/Lee-star-one/vue-#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4"
+  }
 }
