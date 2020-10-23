@@ -4,9 +4,9 @@
   "description": "这是u框架",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test1": "echo \"Error: no test specified\" && exit 1",
     "dev-test":"parcel watch test/* --no-cache & karma start",
-    "test1": "parcel build test/*  --no-cache --no-minify && karma start --single-run"
+    "test": "parcel build test/*  --no-cache --no-minify && karma start --single-run"
   },
   "repository": {
     "type": "git",
