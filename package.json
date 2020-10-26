@@ -2,7 +2,7 @@
   "name": "leestarui",
   "version": "0.0.1",
   "description": "这是ui框架",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "test1": "echo \"Error: no test specified\" && exit 1",
     "dev-test": "parcel watch test/* --no-cache & karma start",
