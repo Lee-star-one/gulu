@@ -5,7 +5,9 @@
 </template>
 
 <script>
+import './svg'
 export default {
+  name:'GuluIcon',
   props: { name },
 };
 </script>

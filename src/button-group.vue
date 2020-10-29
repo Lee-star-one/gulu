@@ -5,6 +5,10 @@
 </template>
 <script>
 export default {
+  name:"GuluButtonGroup",
+  components:{
+  
+  },
   mounted(){
     console.log(this.$el.children)
     for(let node of this.$el.children){
