@@ -35,11 +35,45 @@
         .box {
             margin-top: 10px;
         }
+        .demo{
+            background: #dddddd;
+            border: 1px solid #666;
+            height: 100px;
+        }
     </style>
 </head>
 
 <body>
     <div id='app'>
+        <div class="box">
+            <g-row :align="'left'">
+                <g-col span="23" offset="1" :narrow-pc="{span:7,offset:1}">
+                    <div class="demo"></div>
+                </g-col>
+            </g-row>
+        </div>
+        <div class="box">
+            <g-row>
+                <g-col span="24" :narrow-pc="{span:8}">
+                    <div class="demo"></div>
+                </g-col>
+                <g-col span="24" :narrow-pc="{span:8}">
+                    <div class="demo"></div>
+                </g-col>
+                <g-col span="24" :narrow-pc="{span:8}">
+                    <div class="demo"></div>
+                </g-col>
+                <g-col span="24" :narrow-pc="{span:8}">
+                    <div class="demo"></div>
+                </g-col>
+                <g-col span="24" :narrow-pc="{span:8}">
+                    <div class="demo"></div>
+                </g-col>
+                <g-col span="24" :narrow-pc="{span:8}">
+                    <div class="demo"></div>
+                </g-col>
+            </g-row>
+        </div>
         <div class="box">
             <g-input value="张三"></g-input>
             <g-input value="张三"></g-input>
