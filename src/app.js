@@ -5,6 +5,13 @@ import ButtonGroup from './button-group'
 import Row from './row'
 import Col from './col'
 import Input from './input'
+import Content from './content'
+import Footer from './footer'
+import Header from './header'
+import Layout from './layout'
+import Sider from './sider'
+import plugin from './plugin'
+
 import { expect } from "chai"
 import chai from "chai"
 import spies from 'chai-spies'
@@ -16,6 +23,14 @@ Vue.component('g-button-group', ButtonGroup)
 Vue.component('g-input', Input)
 Vue.component('g-row', Row)
 Vue.component('g-col', Col)
+
+Vue.component('g-content', Content)
+Vue.component('g-footer', Footer)
+Vue.component('g-header', Header)
+Vue.component('g-layout', Layout)
+Vue.component('g-sider', Sider)
+Vue.use(plugin)
+
 new Vue({
     el: '#app',
     data:{
@@ -26,6 +41,19 @@ new Vue({
     methods:{
         inputChange(e){
             console.log(e.target.value)
+        },
+        showToast(){
+            this.$toast('<div style="color:red">有一条新的消息有一条新的消息有一条新的消息有一条新的消息有一条新的消息</div>',{
+                closeButton:{
+                text:"已读",
+                callback(toast){
+                    toast.log()
+                    console.log("用户说他知道了")
+                    }
+                },
+                position:"middle",
+                enableHtml:false
+              })
         }
     }
 })
