@@ -11,6 +11,12 @@ import Header from './header'
 import Layout from './layout'
 import Sider from './sider'
 import plugin from './plugin'
+import Tabs from "./tabs"
+import TabsBody from "./tabs-body";
+import TabsHeader from "./tabs-header";
+import TabsPane from "./tabs-pane";
+import TabsItem from "./tabs-item";
+
 
 import { expect } from "chai"
 import chai from "chai"
@@ -23,12 +29,19 @@ Vue.component('g-button-group', ButtonGroup)
 Vue.component('g-input', Input)
 Vue.component('g-row', Row)
 Vue.component('g-col', Col)
+Vue.component('g-sider', Sider)
+
 
 Vue.component('g-content', Content)
 Vue.component('g-footer', Footer)
 Vue.component('g-header', Header)
 Vue.component('g-layout', Layout)
-Vue.component('g-sider', Sider)
+Vue.component('g-layout', Layout)
+Vue.component('g-tabs', Tabs)
+Vue.component('g-tabs-body', TabsBody)
+Vue.component('g-tabs-header', TabsHeader)
+Vue.component('g-tabs-pane', TabsPane)
+Vue.component('g-tabs-item', TabsItem)
 Vue.use(plugin)
 
 new Vue({
@@ -36,9 +49,13 @@ new Vue({
     data:{
         loading1:true,
         loading2:false,
-        message:"1"
+        message:"1",
+        selectedTab:"sports"
     },
     methods:{
+        yyy(){
+            
+        },
         inputChange(e){
             console.log(e.target.value)
         },

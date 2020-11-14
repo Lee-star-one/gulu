@@ -24,7 +24,7 @@
         }
 
         #app {
-            margin: 20px;
+            /* margin: 20px; */
         }
 
         body {
@@ -34,22 +34,26 @@
         .box {
             margin: 10px 0;
         }
-        .demo{
+
+        .demo {
             background: #dddddd;
             border: 1px solid #666;
             min-height: 100px;
         }
-        .sider{
+
+        .sider {
             background: #333;
             width: 150px;
         }
-        .header{
+
+        .header {
             background: #666;
-            height:50px;
+            height: 50px;
         }
-        .footer{
+
+        .footer {
             background: #666;
-            height:50px;
+            height: 50px;
         }</style>
 <link rel="stylesheet" href="/app.a6a4d504.css"></head>
 
@@ -136,12 +140,49 @@
                     <g-header>header</g-header>
                     <g-content>content</g-content>
                     <g-footer>footer</g-footer>
-                </g-layout> 
+                </g-layout>
             </g-layout>
         </div>
         <p>Toast</p>
         <div class="box">
             <g-button @click="showToast">Toast</g-button>
+        </div>
+        <p>Tabs</p>
+        <div class="box">
+            <!-- <g-tabs selected="selectedTab" @update:selected="selectedTab = $event"> -->
+            <g-tabs :selected.sync="selectedTab">
+                <g-tabs-header class="frank">
+                    <g-tabs-item name="news" disabled="">
+                        新闻
+                    </g-tabs-item>
+                    <g-tabs-item name="finance">
+                        财经
+                    </g-tabs-item>
+                    <g-tabs-item name="sports">
+                        体育
+                    </g-tabs-item>
+                    <g-tabs-item name="yule">
+                        娱乐
+                    </g-tabs-item>
+                    <template slot="actions">
+                        <button>设置</button>
+                    </template>
+                </g-tabs-header>
+                <g-tabs-body>
+                    <g-tabs-pane name="news">
+                        新闻内容
+                    </g-tabs-pane>
+                    <g-tabs-pane name="finance">
+                        财经内容
+                    </g-tabs-pane>
+                    <g-tabs-pane name="sports">
+                        体育内容
+                    </g-tabs-pane>
+                    <g-tabs-pane name="yule">
+                        娱乐内容
+                    </g-tabs-pane>
+                </g-tabs-body>
+            </g-tabs>
         </div>
     </div>
     <script src="/app.a6a4d504.js"></script>
