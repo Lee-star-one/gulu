@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Lee-star-one/vue-.git"
+    "url": "git+https://github.com/Lee-star-one/gulu.git"
   },
   "author": "listar",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Lee-star-one/vue-/issues"
+    "url": "https://github.com/Lee-star-one/gulu/issues"
   },
-  "homepage": "https://github.com/Lee-star-one/vue-#readme",
+  "homepage": "https://github.com/Lee-star-one/gulu#readme",
   "devDependencies": {
     "@vue/component-compiler-utils": "^3.2.0",
     "chai": "^4.2.0",
