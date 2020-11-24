@@ -38,6 +38,10 @@ var _tabsPane = _interopRequireDefault(require("./tabs-pane"));
 
 var _tabsItem = _interopRequireDefault(require("./tabs-item"));
 
+var _collapse = _interopRequireDefault(require("./collapse.vue"));
+
+var _collapseItem = _interopRequireDefault(require("./collapse-item.vue"));
+
 var _chai = _interopRequireWildcard(require("chai"));
 
 var _chaiSpies = _interopRequireDefault(require("chai-spies"));
@@ -84,6 +88,10 @@ _vue["default"].component('g-tabs-pane', _tabsPane["default"]);
 
 _vue["default"].component('g-tabs-item', _tabsItem["default"]);
 
+_vue["default"].component('g-collapse', _collapse["default"]);
+
+_vue["default"].component('g-collapse-item', _collapseItem["default"]);
+
 _vue["default"].use(_plugin["default"]);
 
 new _vue["default"]({
@@ -92,7 +100,8 @@ new _vue["default"]({
     loading1: true,
     loading2: false,
     message: "1",
-    selectedTab: "sports"
+    selectedTab: "sports",
+    selected: ['1', '2']
   },
   methods: {
     yyy: function yyy() {},

@@ -16,6 +16,8 @@ import TabsBody from "./tabs-body";
 import TabsHeader from "./tabs-header";
 import TabsPane from "./tabs-pane";
 import TabsItem from "./tabs-item";
+import Collapse from "./collapse.vue"
+import CollapseItem from "./collapse-item.vue"
 
 
 import { expect } from "chai"
@@ -42,6 +44,8 @@ Vue.component('g-tabs-body', TabsBody)
 Vue.component('g-tabs-header', TabsHeader)
 Vue.component('g-tabs-pane', TabsPane)
 Vue.component('g-tabs-item', TabsItem)
+Vue.component('g-collapse',Collapse)
+Vue.component('g-collapse-item',CollapseItem)
 Vue.use(plugin)
 
 new Vue({
@@ -50,7 +54,8 @@ new Vue({
         loading1:true,
         loading2:false,
         message:"1",
-        selectedTab:"sports"
+        selectedTab:"sports",
+        selected:['1','2']
     },
     methods:{
         yyy(){
