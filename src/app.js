@@ -18,9 +18,12 @@ import TabsPane from "./tabs-pane";
 import TabsItem from "./tabs-item";
 import Collapse from "./collapse.vue"
 import CollapseItem from "./collapse-item.vue"
+import Cascader from "./cascader.vue"
+import CascaderItem from "./cascader-item.vue"
 
-
-import { expect } from "chai"
+import {
+    expect
+} from "chai"
 import chai from "chai"
 import spies from 'chai-spies'
 chai.use(spies)
@@ -44,112 +47,137 @@ Vue.component('g-tabs-body', TabsBody)
 Vue.component('g-tabs-header', TabsHeader)
 Vue.component('g-tabs-pane', TabsPane)
 Vue.component('g-tabs-item', TabsItem)
-Vue.component('g-collapse',Collapse)
-Vue.component('g-collapse-item',CollapseItem)
+Vue.component('g-collapse', Collapse)
+Vue.component('g-collapse-item', CollapseItem)
+Vue.component('g-cascader', Cascader)
+Vue.component('g-cascader-item', CascaderItem)
 Vue.use(plugin)
 
 new Vue({
     el: '#app',
-    data:{
-        loading1:true,
-        loading2:false,
-        message:"1",
-        selectedTab:"sports",
-        selected:['1','2']
+    data: {
+        loading1: true,
+        loading2: false,
+        message: "1",
+        selectedTab: "sports",
+        selected: ['1', '2'],
+        source: [{
+            "name": "浙江",
+            "children": [{
+                "name": "杭州",
+                "children": [{
+                    "name": "上城"
+                }, {
+                    "name": "下城"
+                }]
+            }]
+        },{
+            "name": "山西",
+            "children": [{
+                "name": "太原",
+                "children": [{
+                    "name": "小店"
+                }, {
+                    "name": "迎泽"
+                }]
+            }]
+        }]
     },
-    methods:{
-        yyy(){
-            
+    methods: {
+        yyy() {
+
         },
-        inputChange(e){
+        inputChange(e) {
             console.log(e.target.value)
         },
-        showToast(){
-            this.$toast('<div style="color:red">有一条新的消息有一条新的消息有一条新的消息有一条新的消息有一条新的消息</div>',{
-                closeButton:{
-                text:"已读",
-                callback(toast){
-                    toast.log()
-                    console.log("用户说他知道了")
+        showToast() {
+            this.$toast('<div style="color:red">有一条新的消息有一条新的消息有一条新的消息有一条新的消息有一条新的消息</div>', {
+                closeButton: {
+                    text: "已读",
+                    callback(toast) {
+                        toast.log()
+                        console.log("用户说他知道了")
                     }
                 },
-                position:"middle",
-                enableHtml:false
-              })
+                position: "middle",
+                enableHtml: false
+            })
         }
     }
 })
 
 // 单元测试
 // 测试icon参数
-{   
-    const div=document.createElement('div')
+{
+    const div = document.createElement('div')
     document.body.appendChild(div)
-    const Construtor=Vue.extend(Button)
+    const Construtor = Vue.extend(Button)
     console.log(Construtor)
-    const vm =new Construtor({
-        propsData:{
-            icon:"setting"
+    const vm = new Construtor({
+        propsData: {
+            icon: "setting"
         }
     })
     // vm.$mount('#test')
     vm.$mount(div) //挂在内存
-    let useElement=vm.$el.querySelector('use')
+    let useElement = vm.$el.querySelector('use')
     console.log(useElement)
-    let href=useElement.getAttribute('xlink:href')
+    let href = useElement.getAttribute('xlink:href')
     expect(href).to.eq('#i-setting')
     vm.$el.remove()
     vm.$destroy()
 }
 // 测试loading参数
-{   
-    const div=document.createElement('div')
+{
+    const div = document.createElement('div')
     document.body.appendChild(div)
-    const Construtor=Vue.extend(Button)
-    const vm =new Construtor({
-        propsData:{
-            icon:"setting",
-            loading:true
+    const Construtor = Vue.extend(Button)
+    const vm = new Construtor({
+        propsData: {
+            icon: "setting",
+            loading: true
         }
     })
     vm.$mount(div) //挂在内存
-    let useElement=vm.$el.querySelector('use')
-    let href=useElement.getAttribute('xlink:href')
+    let useElement = vm.$el.querySelector('use')
+    let href = useElement.getAttribute('xlink:href')
     expect(href).to.eq('#i-loading')
     vm.$el.remove()
     vm.$destroy()
 }
 // 测试iconPosition参数
 {
-    const div=document.createElement('div')
+    const div = document.createElement('div')
     document.body.appendChild(div)
-    const Construtor=Vue.extend(Button)
-    const vm =new Construtor({
-        propsData:{
-            icon:"setting",
-            iconPosition:'right'
+    const Construtor = Vue.extend(Button)
+    const vm = new Construtor({
+        propsData: {
+            icon: "setting",
+            iconPosition: 'right'
         }
     })
     vm.$mount(div) //挂在内存
-    let svgElement=vm.$el.querySelector('svg')
-    let {order}=window.getComputedStyle(svgElement)
+    let svgElement = vm.$el.querySelector('svg')
+    let {
+        order
+    } = window.getComputedStyle(svgElement)
     expect(order).to.eq("2")
     vm.$el.remove()
     vm.$destroy()
 }
 // 测试click参数
 {
-    const Construtor=Vue.extend(Button)
-    const vm =new Construtor({
-        propsData:{
-            icon:"setting",
+    const Construtor = Vue.extend(Button)
+    const vm = new Construtor({
+        propsData: {
+            icon: "setting",
         }
     })
     vm.$mount() //挂在内存
-    let spy =chai.spy(function(){})
-    vm.$on('click',spy)
+    let spy = chai.spy(function () {})
+    vm.$on('click', spy)
     // 希望这个函数被执行
-    let button=vm.$el
+    let button = vm.$el
     button.click()
     expect(spy).to.have.been.called()
 }

@@ -55,7 +55,8 @@ export default {
 }
 </script>
 <style lang="less" scoped>
-@import "var.less";
+@border-radius: 4px;
+@grey:#ddd;
 .collapse {
   border:1px solid @grey;
   border-radius: @border-radius;
