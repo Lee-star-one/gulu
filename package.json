@@ -11,7 +11,8 @@
     "test:unit:old": "vue-cli-service test:unit",
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
-    "d": "deploy.sh"
+    "deploy": "gh-pages -d dist",
+    "deploy:build": "npm run docs:build && gh-pages -d dist"
   },
   "dependencies": {
     "cache-loader": "^4.1.0",
@@ -38,6 +39,7 @@
     "@vue/cli-service": "~4.5.0",
     "@vue/test-utils": "^1.0.3",
     "chai": "^4.1.2",
+    "gh-pages": "^3.1.0",
     "less": "^3.0.4",
     "less-loader": "^5.0.0",
     "vue-template-compiler": "^2.6.11"

@@ -1,7 +1,9 @@
 module.exports = {
   base:'/gulu/',
   title:'eco-UI',
+  dest: './dist',
   description:'一个好用的UI框架',
+  repo: 'https://github.com/Lee-star-one/gulu',
   themeConfig: {
     nav: [
       { text: '主页', link: '/' },
