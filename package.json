@@ -10,7 +10,8 @@
     "test:unit": " karma start",
     "test:unit:old": "vue-cli-service test:unit",
     "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs"
+    "docs:build": "vuepress build docs",
+    "deploy": "bash deploy.sh"
   },
   "dependencies": {
     "cache-loader": "^4.1.0",
