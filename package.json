@@ -1,49 +1,50 @@
 {
   "name": "leestarui",
-  "version": "0.0.2",
   "description": "这是ui框架",
-  "main": "dist/index.js",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "test": "karma start --single-run",
+    "test:unit": " karma start",
+    "test:unit:old": "vue-cli-service test:unit",
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
-    "dev-test": "parcel watch test/* --no-cache & karma start",
-    "test": "parcel build test/* --no-cache --no-minify && karma start --single-run"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Lee-star-one/gulu.git"
-  },
-  "author": "listar",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Lee-star-one/gulu/issues"
-  },
-  "homepage": "https://github.com/Lee-star-one/gulu#readme",
-  "devDependencies": {
-    "@vue/component-compiler-utils": "^3.2.0",
-    "chai": "^4.2.0",
-    "chai-spies": "^1.0.0",
-    "karma": "^5.2.3",
-    "karma-chai": "^0.1.0",
-    "karma-chai-spies": "^0.1.4",
-    "karma-chrome-launcher": "^3.1.0",
-    "karma-mocha": "^2.0.1",
-    "karma-sinon-chai": "^2.0.2",
-    "mocha": "^8.2.0",
-    "parcel-bundler": "^1.12.4",
-    "sinon": "^9.2.0",
-    "sinon-chai": "^3.5.0",
-    "vue-template-compiler": "^2.6.12",
-    "vuepress": "^1.7.1"
-  },
-  "alias": {
-    "vue": "./node_modules/vue/dist/vue.common.js"
+    "d": "deploy.sh"
   },
   "dependencies": {
-    "less": "^3.12.2",
-    "less-loader": "^7.1.0",
-    "sass": "^1.26.10",
-    "vue": "^2.6.12",
-    "vue-hot-reload-api": "^2.3.4"
-  }
+    "cache-loader": "^4.1.0",
+    "core-js": "^3.6.5",
+    "jsdom": "^16.4.0",
+    "karma": "^5.2.3",
+    "karma-chrome-launcher": "^3.1.0",
+    "karma-coverage": "^2.0.3",
+    "karma-mocha": "^2.0.1",
+    "karma-sourcemap-loader": "^0.3.8",
+    "karma-spec-reporter": "0.0.32",
+    "karma-webpack": "^4.0.2",
+    "mocha": "^8.2.1",
+    "sinon": "^9.2.2",
+    "sinon-chai": "^3.5.0",
+    "vue": "^2.6.11",
+    "vue-router": "^3.2.0",
+    "vuepress": "^1.7.1"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-router": "~4.5.0",
+    "@vue/cli-plugin-unit-mocha": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "@vue/test-utils": "^1.0.3",
+    "chai": "^4.1.2",
+    "less": "^3.0.4",
+    "less-loader": "^5.0.0",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
 }
