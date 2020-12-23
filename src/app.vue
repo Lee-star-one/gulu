@@ -177,7 +177,7 @@
 </template>
 <script>
 import Vue from 'vue'
-import Button from "./button/button";
+import Button from "./button/button"
 import Icon from './icon/icon'
 import ButtonGroup from './button/button-group'
 import Row from './grid/row'

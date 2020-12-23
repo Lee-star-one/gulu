@@ -24,6 +24,9 @@ import SlidesItem from './slides/slides-item'
 import Nav from './nav/nav'
 import NavItem from './nav/nav-item'
 import SubNav from './nav/subnav'
+import ClickOutside from './assets/js/click-outside'
+import Plugin from './assets/js/plugin'
+import Validate from './assets/js/validate'
 export {
     Button,
     ButtonGroup,
@@ -50,5 +53,50 @@ export {
     SlidesItem,
     Nav,
     NavItem,
-    SubNav
+    SubNav,
+    ClickOutside,
+    Plugin,
+    Validate
 }
+
+const components = [
+  Button,
+    ButtonGroup,
+    Icon,
+    Row,
+    Col,
+    Input,
+    Content,
+    Footer,
+    Header,
+    Layout,
+    Sider,
+    plugin,
+    Tabs,
+    TabsBody,
+    TabsHeader,
+    TabsPane,
+    TabsItem,
+    Collapse,
+    CollapseItem,
+    Cascader,
+    CascaderItem,
+    Slides,
+    SlidesItem,
+    Nav,
+    NavItem,
+    SubNav,
+]
+
+const install = function(Vue) {
+  components.forEach(item => {
+    Vue.component(item.name, item)
+  })
+}
+
+// script直接引用
+if (typeof window !== 'undefined' && window.Vue) {
+  install(window.Vue)
+}
+
+export default { install }
