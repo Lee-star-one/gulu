@@ -1,4 +1,0 @@
----
-title: tabs
----
-# tabs

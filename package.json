@@ -1,17 +1,14 @@
 {
-  "name": "leestarui",
+  "name": "test_gulu_lee",
   "description": "这是ui框架",
-  "version": "0.1.0",
-  "private": true,
+  "version": "0.1.1",
+  "private": false ,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build": "vue-cli-service build --target lib --name gulu src/index.js",
     "test": "karma start --single-run",
     "test:unit": " karma start",
-    "test:unit:old": "vue-cli-service test:unit",
-    "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs",
-    "deploy": "bash deploy.sh"
+    "test:unit:old": "vue-cli-service test:unit"
   },
   "dependencies": {
     "cache-loader": "^4.1.0",
@@ -47,5 +44,19 @@
     "> 1%",
     "last 2 versions",
     "not dead"
-  ]
+  ],
+  "main": "dist/gulu.umd.min.js",
+  "directories": {
+    "test": "tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lee-star-one/vue-.git"
+  },
+  "author": "lee-star-one",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lee-star-one/vue-/issues"
+  },
+  "homepage": "https://github.com/Lee-star-one/vue-#readme"
 }

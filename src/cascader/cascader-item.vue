@@ -72,7 +72,17 @@ export default {
 };
 </script>
 <style lang="less" scoped>
-@import "../assets/css/var";
+@border-color-hover: #666;
+@border-color: #999;
+@border-color-light:lighten(@border-color,30%);
+@border-radius: 4px;
+@button-active-bg: #eee;
+@button-bg: white;
+@button-height: 32px;
+@button-size: 14px;
+@color: #333;
+@font-size: 14px;
+@grey:#ddd;
 // @border-color:#999;
 .cascaderItem {
   display: flex;
