@@ -2,7 +2,8 @@
 [![Build Status](https://www.travis-ci.org/Lee-star-one/gulu.svg?branch=master)](https://www.travis-ci.org/Lee-star-one/gulu)
 [![NPM version](https://img.shields.io/npm/v/gulu.svg)](https://www.npmjs.com/package/gulu)
 ## 介绍
-
+demo
+https://lee-star-one.github.io/gulu_docs/
 ## 开始使用
 
 1. 安装 gulu

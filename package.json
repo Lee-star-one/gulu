@@ -1,7 +1,7 @@
 {
   "name": "test_gulu_lee",
   "description": "这是ui框架",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "private": false ,
   "scripts": {
     "serve": "vue-cli-service serve",

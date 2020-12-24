@@ -3,10 +3,10 @@ node_modules
 .cache/
 .vscode/
 
-#src/
-#tests/
-#vue.config.js
-#babel.config.js
+src/
+tests/
+vue.config.js
+babel.config.js
 
 
 
