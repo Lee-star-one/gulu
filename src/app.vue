@@ -3,22 +3,13 @@
         <p>栅格</p>
         <div class="box">
             <g-row>
-                <g-col span="24" :narrow-pc="{span:8}">
+                <g-col span="4" :pc="{span:6}" offset="2">
                     <div class="demo"></div>
                 </g-col>
-                <g-col span="24" :narrow-pc="{span:8}">
+                <g-col span="4" :pc="{span:6}" offset="2">
                     <div class="demo"></div>
                 </g-col>
-                <g-col span="24" :narrow-pc="{span:8}">
-                    <div class="demo"></div>
-                </g-col>
-                <g-col span="24" :narrow-pc="{span:8}">
-                    <div class="demo"></div>
-                </g-col>
-                <g-col span="24" :narrow-pc="{span:8}">
-                    <div class="demo"></div>
-                </g-col>
-                <g-col span="24" :narrow-pc="{span:8}">
+                <g-col span="4" :pc="{span:6}" offset="2">
                     <div class="demo"></div>
                 </g-col>
             </g-row>
@@ -51,7 +42,7 @@
             <!-- 错误示例 -->
             <!-- <g-button icon="setting" icon-position="up">设置</g-button> -->
             <!-- 错误示例 -->
-            <!-- 
+            <!--
         <g-button-group>
             <div><g-button icon="left">上一页</g-button></div>
             <g-button icon="you" icon-position="right">下一页</g-button>
@@ -229,6 +220,7 @@ Vue.component('g-slides-item',SlidesItem)
 Vue.component('g-nav',Nav)
 Vue.component('g-nav-item',NavItem)
 Vue.component('g-sub-nav',SubNav)
+Vue.use(plugin)
 export default {
   name: "demo",
   components: {
@@ -284,7 +276,6 @@ export default {
             console.log(e.target.value)
         },
         showToast() {
-            plugin.install(Vue)
             this.$toast('<div style="color:#ff0000">有一条新的消息有一条新的消息有一条新的消息有一条新的消息有一条新的消息</div>', {
                 closeButton: {
                     text: "已读",

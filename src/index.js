@@ -9,7 +9,6 @@ import Footer from './layout/footer'
 import Header from './layout/header'
 import Layout from './layout/layout'
 import Sider from './layout/sider'
-import plugin from './assets/js/plugin'
 import Tabs from "./tabs/tabs"
 import TabsBody from "./tabs/tabs-body";
 import TabsHeader from "./tabs/tabs-header";
@@ -24,7 +23,6 @@ import SlidesItem from './slides/slides-item'
 import Nav from './nav/nav'
 import NavItem from './nav/nav-item'
 import SubNav from './nav/subnav'
-import ClickOutside from './assets/js/click-outside'
 import Plugin from './assets/js/plugin'
 import Validate from './assets/js/validate'
 export {
@@ -39,7 +37,7 @@ export {
     Header,
     Layout,
     Sider,
-    plugin,
+    Plugin,
     Tabs,
     TabsBody,
     TabsHeader,
@@ -54,8 +52,6 @@ export {
     Nav,
     NavItem,
     SubNav,
-    ClickOutside,
-    Plugin,
     Validate
 }
 

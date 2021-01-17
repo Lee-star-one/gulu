@@ -7,7 +7,6 @@
         :key="index"
         @click="onClickLabel(item)"
       >
-        {{ item.name }}
         <span v-if="item.children"><g-icon name="you"></g-icon></span>
       </div>
     </div>
