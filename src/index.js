@@ -23,9 +23,17 @@ import SlidesItem from './slides/slides-item'
 import Nav from './nav/nav'
 import NavItem from './nav/nav-item'
 import SubNav from './nav/subnav'
+import Container from './map/container'
+import Marker from './map/marker'
+import TileLayer from './map/tileLayer'
 import Plugin from './assets/js/plugin'
 import Validate from './assets/js/validate'
+
+
 export {
+    Container,
+    Marker,
+    TileLayer,
     Button,
     ButtonGroup,
     Icon,
@@ -56,7 +64,10 @@ export {
 }
 
 const components = [
-  Button,
+    Container,
+    Marker,
+    TileLayer,
+    Button,
     ButtonGroup,
     Icon,
     Row,
